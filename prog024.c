@@ -4,19 +4,23 @@
 
 #define N 50
 
-int main(){
+int main()
+{
     setlocale(LC_ALL, "Portuguese");
 
-    char s1[N] = {"Lógica de "};
-    char s2[N] = {"Programação!"};
+    char s[N];
+    int i;
 
-    printf("Antes do strcat: \n");
-    printf("str1: %s\n", s1);
-    printf("str2: %s\n", s2);
+    printf("Digite um texto: ");
+    scanf("%49s", s);
+    i = strlen(s);
+    printf("\nTamanho do texto: %d\n\n", i);
 
-    strcat(s1, s2);
+    printf("Impressão de posição a posição: \n");
+    for (i = 0; i < strlen(s); i++)
+    {
+        printf("%c", s[i]);
+    }
 
-    printf("Depois do strcat: ");
-    puts(s1);
-
+    return 0;
 }
